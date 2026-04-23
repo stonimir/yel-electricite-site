@@ -1,0 +1,13 @@
+{
+  "name": "Yel Électricité",
+  "short_name": "Yel",
+  "description": "Électricien à Beaumont-lès-Valence (Drôme) — installation, rénovation, dépannage, bornes IRVE.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D1B2A",
+  "theme_color": "#0D1B2A",
+  "icons": [
+    { "src": "assets/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

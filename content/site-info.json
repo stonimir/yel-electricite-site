@@ -1,0 +1,21 @@
+{
+  "telephone": "06 19 85 06 22",
+  "email": "yevincent@hotmail.com",
+  "horaires_semaine": "Lun–Ven 8 h – 18 h 30",
+  "horaires_samedi": "Sam 9 h – 12 h",
+  "message_disponibilite": "Disponible cette semaine — Beaumont-lès-Valence & alentours",
+  "communes": [
+    "Beaumont-lès-Valence",
+    "Valence",
+    "Montélimar",
+    "Crest",
+    "Romans-sur-Isère",
+    "Bourg-lès-Valence",
+    "Portes-lès-Valence",
+    "Chabeuil",
+    "Livron-sur-Drôme",
+    "Loriol-sur-Drôme",
+    "Étoile-sur-Rhône",
+    "Allex"
+  ]
+}

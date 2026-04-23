@@ -1,0 +1,5 @@
+# Netlify redirects — redirections propres
+# (le site est une SPA simple, pas de routage côté client nécessaire)
+
+# Redirige les anciennes URLs éventuelles vers l'accueil si besoin
+# /ancienne-page /  301

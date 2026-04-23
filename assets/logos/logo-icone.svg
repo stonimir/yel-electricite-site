@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Yel Électricité logo">
+  <title>Yel Électricité — Monogramme Y Circuit</title>
+
+  <!-- Fond optionnel (transparent par défaut) -->
+  <defs>
+    <linearGradient id="yelBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14283F"/>
+      <stop offset="100%" stop-color="#0D1B2A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circuit traces subtils (fond) -->
+  <g stroke="#0D1B2A" stroke-width="1.2" fill="none" opacity="0.22">
+    <path d="M20 50 H46"/>
+    <path d="M20 50 V30"/>
+    <circle cx="20" cy="30" r="1.6" fill="#0D1B2A" stroke="none"/>
+
+    <path d="M180 50 H154"/>
+    <path d="M180 50 V30"/>
+    <circle cx="180" cy="30" r="1.6" fill="#0D1B2A" stroke="none"/>
+
+    <path d="M100 180 V170"/>
+    <path d="M130 180 H100"/>
+    <circle cx="130" cy="180" r="1.6" fill="#0D1B2A" stroke="none"/>
+    <path d="M70 180 H100"/>
+    <circle cx="70" cy="180" r="1.6" fill="#0D1B2A" stroke="none"/>
+  </g>
+
+  <!-- Lettre Y principale -->
+  <g fill="none" stroke="url(#yelBlueGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Branche supérieure gauche -->
+    <path d="M54 50 L100 108"/>
+    <!-- Branche supérieure droite -->
+    <path d="M146 50 L100 108"/>
+    <!-- Tronc inférieur -->
+    <path d="M100 108 L100 166"/>
+  </g>
+
+  <!-- Nœuds circuit aux terminaux (bleu) -->
+  <g fill="#0D1B2A">
+    <circle cx="54" cy="50" r="10"/>
+    <circle cx="146" cy="50" r="10"/>
+    <circle cx="100" cy="166" r="10"/>
+  </g>
+
+  <!-- Accent jaune : puce/chip centrale -->
+  <g>
+    <rect x="92" y="100" width="16" height="16" rx="2.5" fill="#F5C518" stroke="#0D1B2A" stroke-width="2"/>
+    <!-- Pattes de la puce -->
+    <line x1="96" y1="116" x2="96" y2="120" stroke="#0D1B2A" stroke-width="2" stroke-linecap="round"/>
+    <line x1="104" y1="116" x2="104" y2="120" stroke="#0D1B2A" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Petit éclair accent (optionnel, très discret) -->
+  <g fill="#F5C518" opacity="0.95">
+    <circle cx="54" cy="50" r="3"/>
+    <circle cx="146" cy="50" r="3"/>
+    <circle cx="100" cy="166" r="3"/>
+  </g>
+</svg>

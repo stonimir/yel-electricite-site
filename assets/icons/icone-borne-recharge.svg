@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Borne de recharge véhicule électrique">
+  <title>Borne de recharge IRVE</title>
+  <!-- Corps de la borne -->
+  <rect x="14" y="8" width="24" height="44" rx="3" fill="none" stroke="#0D1B2A" stroke-width="3"/>
+  <!-- Écran -->
+  <rect x="18" y="12" width="16" height="10" rx="1" fill="#0D1B2A"/>
+  <!-- Éclair sur écran -->
+  <path d="M27 14 L22 19 H25 L24 22 L29 17 H26 L27 14 Z" fill="#F5C518"/>
+  <!-- Prise de recharge (rond) -->
+  <circle cx="26" cy="32" r="5" fill="none" stroke="#0D1B2A" stroke-width="2.5"/>
+  <circle cx="26" cy="32" r="2" fill="#0D1B2A"/>
+  <!-- Indicateurs LED -->
+  <circle cx="20" cy="44" r="1.5" fill="#F5C518"/>
+  <circle cx="26" cy="44" r="1.5" fill="#0D1B2A" opacity="0.3"/>
+  <circle cx="32" cy="44" r="1.5" fill="#0D1B2A" opacity="0.3"/>
+  <!-- Base / socle -->
+  <rect x="12" y="52" width="28" height="3" rx="1" fill="#0D1B2A"/>
+  <!-- Câble de charge -->
+  <path d="M38 28 Q 50 28 50 40 Q 50 52 56 54"
+        fill="none"
+        stroke="#0D1B2A"
+        stroke-width="3"
+        stroke-linecap="round"/>
+  <!-- Connecteur (embout) -->
+  <rect x="52" y="52" width="8" height="6" rx="1.5" fill="#F5C518" stroke="#0D1B2A" stroke-width="2"/>
+</svg>

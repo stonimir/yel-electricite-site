@@ -1,0 +1,93 @@
+# =============================================================================
+# Decap CMS — Configuration pour Yel Électricité
+# =============================================================================
+# Modifier ce fichier avec prudence. L'interface /admin utilise ce schéma
+# pour générer les formulaires éditables par Yé Vincent depuis son téléphone.
+# Doc officielle : https://decapcms.org/docs/configuration-options/
+# =============================================================================
+
+backend:
+  name: git-gateway         # auth via Netlify Identity (zéro config OAuth)
+  branch: main              # branche Git sur laquelle publier
+
+# Langue de l'interface CMS
+locale: fr
+
+# Dossier où sont stockées les images uploadées via le CMS
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# Auto-publication : les modifs sont publiées directement (pas de workflow
+# éditorial). Simple pour un artisan solo.
+publish_mode: simple
+
+# =============================================================================
+# Collections (ce que Yé peut éditer)
+# =============================================================================
+collections:
+
+  # ---------------------------------------------------------------------------
+  # 1. AVIS CLIENTS
+  # ---------------------------------------------------------------------------
+  - name: "avis"
+    label: "⭐ Avis clients"
+    description: "Ajoutez, modifiez ou supprimez les avis de vos clients. Ils apparaissent dans la section « Avis » du site."
+    files:
+      - file: "content/avis.json"
+        name: "avis"
+        label: "Liste des avis"
+        fields:
+          - label: "Avis"
+            name: "avis"
+            widget: "list"
+            summary: "{{fields.auteur}} — {{fields.commune}} ({{fields.note}}★)"
+            fields:
+              - {label: "Prénom + initiale du nom (ex : Julie M.)", name: "auteur", widget: "string"}
+              - {label: "Commune (ex : Valence)", name: "commune", widget: "string"}
+              - {label: "Texte de l'avis", name: "texte", widget: "text"}
+              - {label: "Note sur 5", name: "note", widget: "number", min: 1, max: 5, default: 5, value_type: "int"}
+
+  # ---------------------------------------------------------------------------
+  # 2. ACTUALITÉS
+  # ---------------------------------------------------------------------------
+  - name: "actualites"
+    label: "📰 Actualités"
+    description: "Publiez des actualités (chantiers réalisés, conseils, infos). La section « Actualités » du site apparaît automatiquement dès qu'il y a au moins 1 publication."
+    files:
+      - file: "content/actualites.json"
+        name: "actualites"
+        label: "Liste des actualités"
+        fields:
+          - label: "Actualités"
+            name: "actualites"
+            widget: "list"
+            summary: "{{fields.titre}} — {{fields.date}}"
+            fields:
+              - {label: "Titre", name: "titre", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
+              - {label: "Image (facultative)", name: "image", widget: "image", required: false}
+              - {label: "Résumé (1-2 phrases visibles sur la carte)", name: "resume", widget: "text"}
+              - {label: "Contenu complet (Markdown accepté)", name: "contenu", widget: "markdown", required: false}
+
+  # ---------------------------------------------------------------------------
+  # 3. INFOS GÉNÉRALES (téléphone, horaires, zones, badge dispo)
+  # ---------------------------------------------------------------------------
+  - name: "info"
+    label: "⚙️ Informations générales"
+    description: "Coordonnées affichées partout sur le site, horaires et communes desservies."
+    files:
+      - file: "content/site-info.json"
+        name: "site_info"
+        label: "Infos du site"
+        fields:
+          - {label: "Téléphone (format FR, ex : 06 19 85 06 22)", name: "telephone", widget: "string"}
+          - {label: "Email de contact", name: "email", widget: "string"}
+          - {label: "Horaires en semaine", name: "horaires_semaine", widget: "string", hint: "Ex : Lun–Ven 8 h – 18 h 30"}
+          - {label: "Horaires samedi", name: "horaires_samedi", widget: "string", hint: "Laisser vide si fermé"}
+          - {label: "Message de disponibilité (hero)", name: "message_disponibilite", widget: "string", hint: "Ex : Disponible cette semaine — Beaumont-lès-Valence & alentours"}
+          - label: "Communes desservies"
+            name: "communes"
+            widget: "list"
+            hint: "Une commune par ligne. Ajoutez/retirez avec les boutons + / -."
+            # Liste de chaînes simples (pas d'objets) — Decap le gère quand aucun 'field/fields' n'est défini
+            default: ["Beaumont-lès-Valence", "Valence", "Montélimar"]

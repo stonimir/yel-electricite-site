@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Éclair">
+  <title>Éclair / électricité</title>
+  <!-- Éclair jaune avec contour bleu -->
+  <path d="M36 4 L14 34 H28 L22 60 L50 28 H34 L40 4 Z"
+        fill="#F5C518"
+        stroke="#0D1B2A"
+        stroke-width="3"
+        stroke-linejoin="round"
+        stroke-linecap="round"/>
+</svg>

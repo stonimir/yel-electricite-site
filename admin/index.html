@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin — Yel Électricité</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="../assets/favicon.ico" />
+
+  <!-- Netlify Identity : permet de se connecter sans créer d'OAuth GitHub -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- Decap CMS (ex-Netlify CMS) — interface d'administration responsive -->
+  <script src="https://unpkg.com/decap-cms@^3.3.0/dist/decap-cms.js"></script>
+
+  <script>
+    // Ferme la modale Netlify Identity et redirige vers /admin après login
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function () {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
