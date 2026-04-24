@@ -11,7 +11,7 @@ Compatible avec n'importe quel hébergeur statique (Netlify, OVH, GitHub Pages, 
 
 ```
 site-yel-electricite/
-├── index.html                       # Page principale (hero, services, à propos, zone, FAQ, devis, contact)
+├── index.html                       # Page principale (hero, services, à propos, zone, FAQ, contact)
 ├── mentions-legales.html            # Mentions légales
 ├── politique-confidentialite.html   # RGPD & cookies
 ├── robots.txt                       # Robots / référencement
@@ -49,26 +49,11 @@ Le CMS nécessite :
 
 ---
 
-## 🚀 Déploiement (3 étapes)
+## 🚀 Déploiement (2 étapes)
 
-### 1. Configurer le formulaire de devis (Formspree)
+> ℹ️ **Pas de formulaire de devis en ligne** — le contact se fait uniquement par téléphone et email. Aucun service tiers (Formspree, etc.) à configurer. Les visiteurs appellent directement le **06 19 85 06 22** ou écrivent à **yevincent@hotmail.com**.
 
-Avant la mise en ligne, il faut remplacer le placeholder `YOUR_FORM_ID` dans `index.html` :
-
-1. Créer un compte gratuit sur **[formspree.io](https://formspree.io)** (plan gratuit = 50 envois/mois)
-2. Cliquer sur **“+ New Form”** → lui donner un nom (ex. *“Devis Yel Électricité”*)
-3. Renseigner l'email destinataire : `yevincent@hotmail.com`
-4. Copier l'endpoint affiché, de la forme : `https://formspree.io/f/xxxxxxx`
-5. Dans `index.html`, remplacer :
-   ```html
-   <form id="devisForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-   ```
-   par l'URL copiée.
-6. Envoyer un premier test — Formspree demandera de confirmer l'email destinataire (1 clic).
-
-> **Tant que `YOUR_FORM_ID` n'est pas remplacé**, le formulaire bascule automatiquement en fallback `mailto:` (ouvre la messagerie du visiteur). C'est une sécurité pour qu'aucune demande ne soit perdue.
-
-### 2. Déployer sur Netlify (option recommandée)
+### 1. Déployer sur Netlify (option recommandée)
 
 **Méthode 1 — Drag & drop (la plus simple) :**
 
@@ -86,7 +71,7 @@ Avant la mise en ligne, il faut remplacer le placeholder `YOUR_FORM_ID` dans `in
 3. Build command : *laisser vide* — Publish directory : `.`
 4. Chaque `git push` redéploie automatiquement le site ✨
 
-### 3. Nom de domaine (`yel-electricite.fr`)
+### 2. Nom de domaine (`yel-electricite.fr`)
 
 - Acheter le domaine chez un registrar (OVH, Gandi, Infomaniak, Namecheap…)
 - Dans Netlify : **Domain settings → Add custom domain** → `yel-electricite.fr`
@@ -104,10 +89,6 @@ Remplacer les mentions *“à compléter”* :
 - **N° TVA intracommunautaire** (si applicable)
 - **Compagnie d'assurance RC Pro** + numéro de contrat
 - (Optionnel) N° médiateur de la consommation
-
-### Formspree
-
-- ID de formulaire (voir étape 1 plus haut)
 
 ### Avis clients
 
@@ -155,15 +136,13 @@ Tout se modifie directement dans les fichiers HTML/CSS :
 
 ## ✅ Checklist de mise en ligne
 
-- [ ] Remplacer `YOUR_FORM_ID` par l'endpoint Formspree
-- [ ] Confirmer l'email destinataire dans Formspree (1er email de test)
+- [x] Pousser le site sur GitHub
+- [x] Connecter le repo à Netlify (Import from Git)
 - [ ] Compléter SIRET / assurance dans `mentions-legales.html`
-- [ ] Pousser le site sur GitHub (pour activer le CMS)
-- [ ] Connecter le repo à Netlify (Import from Git, plutôt que drag & drop)
 - [ ] Activer **Netlify Identity + Git Gateway** (voir `GUIDE-CMS.md`)
 - [ ] Inviter Yé Vincent comme utilisateur du CMS
 - [ ] Connecter le domaine `yel-electricite.fr`
-- [ ] Vérifier téléphone / email / formulaire / lien `/admin`
+- [ ] Vérifier téléphone / email / lien `/admin` sur mobile
 - [ ] Soumettre le site à **Google Search Console** et y ajouter le sitemap
 - [ ] Créer une fiche **Google Business Profile** (ex‑Google My Business) pour le référencement local
 
