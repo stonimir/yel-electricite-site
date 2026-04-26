@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yel-electricite.fr/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://yel-electricite.netlify.app/</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yel-electricite.fr/mentions-legales.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://yel-electricite.netlify.app/electricien-valence-26.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yel-electricite.netlify.app/mentions-legales.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://yel-electricite.fr/politique-confidentialite.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://yel-electricite.netlify.app/politique-confidentialite.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
